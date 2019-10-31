@@ -7,8 +7,9 @@ namespace CrudDotNetCore.Models
 {
     public class Department
     {
-        [BsonRepresentation(BsonType.ObjectId)]
         private String id;
+        
+        [BsonRepresentation(BsonType.ObjectId)]
         public String Id
         {
             get { return id; }

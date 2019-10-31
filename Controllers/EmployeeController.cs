@@ -87,6 +87,10 @@ namespace CrudDotNetCore.Controllers
         [HttpPost]
         public IActionResult Create(EmployeeViewModel employeeViewModel)
         {
+            foreach (Department department in employeeViewModel.Departments) {
+                department = dbContext.SaveDepartment(department);
+            }
+
             Employee employee = MapEmployee(employeeViewModel);
 
             dbContext.Create(employee);
