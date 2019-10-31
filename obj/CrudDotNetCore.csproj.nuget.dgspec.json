@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/esdras/Desktop/CrudDotNetCore/CrudDotNetCore.csproj": {}
+    "/home/esdras/Desktop/Esdras/CrudDotNetCoreMVC/CrudDotNetCore.csproj": {}
   },
   "projects": {
-    "/home/esdras/Desktop/CrudDotNetCore/CrudDotNetCore.csproj": {
+    "/home/esdras/Desktop/Esdras/CrudDotNetCoreMVC/CrudDotNetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/esdras/Desktop/CrudDotNetCore/CrudDotNetCore.csproj",
+        "projectUniqueName": "/home/esdras/Desktop/Esdras/CrudDotNetCoreMVC/CrudDotNetCore.csproj",
         "projectName": "CrudDotNetCore",
-        "projectPath": "/home/esdras/Desktop/CrudDotNetCore/CrudDotNetCore.csproj",
+        "projectPath": "/home/esdras/Desktop/Esdras/CrudDotNetCoreMVC/CrudDotNetCore.csproj",
         "packagesPath": "/home/esdras/.nuget/packages/",
-        "outputPath": "/home/esdras/Desktop/CrudDotNetCore/obj/",
+        "outputPath": "/home/esdras/Desktop/Esdras/CrudDotNetCoreMVC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/esdras/.nuget/NuGet/NuGet.Config"

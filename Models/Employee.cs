@@ -18,6 +18,6 @@ namespace CrudDotNetCore.Models
         public Double Salary { get; set; }
 
         [Required]
-        public IEnumerable<Department> Departments { get; set; }
+        public IList<Department> Departments { get; set; }
     }
 }

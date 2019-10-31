@@ -29,20 +29,30 @@ namespace CrudDotNetCore.Controllers
             return View(dbContext.GetAllEmployees().Result);
         }
 
+        private EmployeeViewModel MapEmployeeViewModel(Employee employee)
+        {
+            return new EmployeeViewModel() {
+                Employee = employee,
+                Departments = employee.Departments
+            };
+        }
+
         [HttpGet]
         public IActionResult Edit(String id)
         {
             var entity = dbContext.GetEmployee(id).Result;
 
-            return View(entity);
+            return View(MapEmployeeViewModel(entity));
         }
 
         [HttpPost]
-        public IActionResult Edit(Employee entity)
+        public IActionResult Edit(EmployeeViewModel employeeViewModel)
         {
-            dbContext.Update(entity);
+            Employee employee = MapEmployee(employeeViewModel);
 
-            return View(entity);
+            dbContext.Update(employee);
+
+            return View(MapEmployeeViewModel(employee));
         }
 
         [HttpGet]
@@ -67,6 +77,7 @@ namespace CrudDotNetCore.Controllers
         private Employee MapEmployee(EmployeeViewModel employeeViewModel)
         {
             return new Employee() {
+                Id = employeeViewModel.Employee.Id,
                 Name = employeeViewModel.Employee.Name,
                 Salary = employeeViewModel.Employee.Salary,
                 Departments = employeeViewModel.Departments
